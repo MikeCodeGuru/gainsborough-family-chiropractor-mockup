@@ -12,29 +12,29 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* Exact Avyora color palette */
-      --atoll:        #003238;
-      --atoll-900:    #07555a;
-      --atoll-800:    #017076;
-      --atoll-700:    #00868b;
-      --atoll-600:    #00adb0;
-      --atoll-500:    #00dada;
-      --atoll-400:    #0af7f5;
-      --atoll-300:    #41fffe;
-      --atoll-200:    #86fffe;
-      --atoll-100:    #c2fffe;
-      --dawn-pink:    #f5ede9;
-      --dawn-pink-dk: #33241c;
-      --dark-900:     #3d3d3d;
-      --dark:         #2f2f2f;
+      /* Gradient palette: sky blue -> lavender -> pink -> peach -> orange */
+      --atoll:        #3a2d6e;  /* deep indigo (replaces dark teal) */
+      --atoll-900:    #5a4290;  /* medium indigo */
+      --atoll-800:    #7a5aaf;  /* soft violet */
+      --atoll-700:    #9b78c8;  /* lavender-violet */
+      --atoll-600:    #b3a5f5;  /* light lavender */
+      --atoll-500:    #c9b8f8;  /* pale lavender */
+      --atoll-400:    #95c6fa;  /* sky blue accent (replaces cyan) */
+      --atoll-300:    #aed6fb;  /* lighter sky blue */
+      --atoll-200:    #c8e5fd;  /* very light blue */
+      --atoll-100:    #e3f2fe;  /* near-white blue */
+      --dawn-pink:    #f7eef9;  /* soft lavender-pink (replaces cream) */
+      --dawn-pink-dk: #3d2040;  /* deep plum */
+      --dark-900:     #2d2040;  /* near-black indigo */
+      --dark:         #1e1530;  /* deepest indigo */
       --white:        #ffffff;
       --white-900:    rgba(255,255,255,0.9);
       --white-800:    rgba(255,255,255,0.8);
       --white-700:    rgba(255,255,255,0.7);
       --white-500:    rgba(255,255,255,0.5);
       --white-300:    rgba(255,255,255,0.3);
-      --dark-300:     #b0b0b0;
-      --dark-500:     #6d6d6d;
+      --dark-300:     #b0a8c8;
+      --dark-500:     #7a6e96;
 
       /* Typography */
       --font: 'Inclusive Sans', sans-serif;
@@ -104,7 +104,7 @@
       justify-content: space-between;
       height: 62px;
       padding: 0 32px;
-      background: rgba(0,50,56,0.0);
+      background: rgba(58,45,110,0.0);
       border-radius: var(--radius-nav);
       transition: background 0.3s, box-shadow 0.3s;
     }
@@ -114,10 +114,10 @@
       -webkit-backdrop-filter: blur(16px);
       box-shadow: 0 2px 24px rgba(0,0,0,0.10);
     }
-    /* GFC brand coral/orange accent */
+    /* GFC brand accent — peach/orange from gradient palette */
     :root {
-      --gfc-coral:  #e8613a;
-      --gfc-coral-light: #f07a56;
+      --gfc-coral:  #f0aa5e;  /* warm orange from gradient */
+      --gfc-coral-light: #f5be82;  /* lighter peach */
     }
     .nav-logo {
       font-family: var(--font);
@@ -191,9 +191,9 @@
       position: absolute; inset: 0;
       background: linear-gradient(
         180deg,
-        rgba(0,30,35,0.30) 0%,
-        rgba(0,30,35,0.50) 40%,
-        rgba(0,0,0,0.78) 100%
+        rgba(58,45,110,0.35) 0%,
+        rgba(179,165,245,0.25) 40%,
+        rgba(58,45,110,0.82) 100%
       );
     }
     .hero-inner {
@@ -850,7 +850,12 @@
     .cta-section::before {
       content: '';
       position: absolute; inset: 0;
-      background: rgba(0,0,0,0.65);
+      background: linear-gradient(
+        135deg,
+        rgba(58,45,110,0.80) 0%,
+        rgba(231,169,241,0.55) 50%,
+        rgba(240,170,94,0.70) 100%
+      );
     }
     .cta-inner {
       position: relative; z-index: 1;
